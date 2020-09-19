@@ -80,7 +80,48 @@ upper = [c.upper() for c in "Hello"]
 def add(x, y):
   return x + y
 print(add(1, 3))
-print(add("hello"," world"))
+print(add("hello", " world"))
+
+#obj
+# print(dir(str))  #dir() lists all attributes of obj
+# for item in dir(str):
+#   print(item)
+
+#classes:
+class A:
+  x = 2
+print(A.x)
+
+class Counter:
+    count = 0          # class attribute count
+    def increment():   # define method to increment count
+        Counter.count += 1
+
+Counter.increment()
+print(Counter.count)
+
+
+#inheritence
+class Parent:
+  def test(self):
+    print("test")
+class Child(Parent):
+  pass
+
+c = Child()
+c.test()
+
+class StringWrapper:
+  def __init__(self, string):
+    self.input = string
+    self.length = len(string)
+  def reversed(self):
+    output = ""
+    for index in range(self.length, 0, -1):
+      output += self.input[index - 1]
+    return output
+
+
 
 
 
