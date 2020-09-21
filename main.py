@@ -1,6 +1,6 @@
 from mymodule import test
 import json
-from 
+from
 
 test()
 
@@ -37,4 +37,6 @@ with open('fake_fruits.json', 'w') as f:
 
 with open('fake_fruits.json', 'r') as f:
    print(f.read())
+
+
 

@@ -12,23 +12,32 @@ p = '{"name": "Bob", "languages": ["Python", "Java"]}'
 
 person = '{"name": "Bob", "languages": ["English", "Fench"]}'
 person_dict = json.loads(person)
-print(person_dict)
-print(person_dict['name'])
+#print(person_dict)
+#print(person_dict['name'])
 
 #-2:File containing json object parsing using json.load() method-->return dictionary
 
 with open('fake_fruit.json', 'r') as f:
   data = json.load(f)
-print("data", data)
+#print("data", data)
 
 #converta dict to json:
 
-person_dict = {'name': 'Bob',
-'age': 12,
-'children': None
+person_dict ={
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
 }
 
-person_json = json.dumps(person_dict)
+
+person_json = json.dumps(person_dict , indent=4, sort_keys=True)
 print(person_json)
 
 #write JSON to a file in python
